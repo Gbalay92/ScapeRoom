@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="BOTTOM_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.randomnumber.ViewController" style="-fx-background-image: url('https://thumbs.dreamstime.com/b/el-dibujo-de-vida-la-madera-clara-natural-en-un-primer-jaula-textura-del-fondo-201737250.jpg')">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="0"/>
+    </padding>
+    <Label fx:id="Titulo" alignment="BOTTOM_CENTER" style="-fx-font: 20px serif; -fx-stroke: black;
+        -fx-stroke-width: 1;-fx-stroke: black;">Bienvenido a tu peor pesadilla</Label>
+    <HBox spacing="5.0" style="-fx-font: 14px serif; -fx-padding: 15; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;"  alignment="CENTER_LEFT">
+        <ImageView fx:id="img">
+            <image>
+                <Image url="@myImage.png"/>
+            </image>
+        </ImageView>
+        <VBox spacing="10.0" alignment="TOP_CENTER">
+            <Button fx:id="reset" visible="false" onAction="#onButtonResetClick" alignment="CENTER">Volver a jugar</Button>
+            <Label fx:id="Description" alignment="CENTER" maxWidth="500" prefHeight="60" wrapText="true" style="-fx-font: 15px serif; -fx-stroke: black;">
+                Bienvenido a esta terrorifica sala de la que no saldras hasta descifrar el codigo,
+                tienes 6 intentos para ello y alguna que otra pista por el camino, deberas estar atento a los colores
+                ¿A que Mr.Increible serás capaz de desbloquear?
+            </Label>
+        </VBox>
+    </HBox>
+    <HBox spacing="10.0" alignment="CENTER">
+        <Label fx:id="minMax" style="-fx-padding: 5; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+            Número entre 1 y 100</Label>
+        <Label style="-fx-padding: 5; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;"
+               fx:id="nIntentos">Tienes un total de 6 Intentos</Label>
+        <Label style="-fx-padding: 5; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;"
+               fx:id="intentosR">Te quedan 6 intentos</Label>
+    </HBox>
+    <HBox alignment="CENTER" spacing="10.0">
+        <TextField fx:id="inputNumber"> </TextField>
+        <Button fx:id="probar" onAction="#onButtonProbarCLick">Probar</Button>
+    </HBox>
+    <HBox alignment="CENTER" spacing="40.0" >
+        <ImageView fx:id="victoria" visible="false">
+            <image >
+                <Image url="@fine.png" requestedWidth="130" requestedHeight="130"/>
+            </image>
+        </ImageView>
+        <Label fx:id="feedback" prefWidth="300" prefHeight="80" alignment="CENTER" textFill="whitesmoke" style="-fx-padding: 5; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;
+            -fx-font: 19px serif ; stroke: black; -fx-stroke-width: 1; -fx-background-color: #0F0301;" wrapText="true">
+            Atrevete a empezar..</Label>
+        <ImageView fx:id="derrota" visible="false"  >
+            <image >
+                <Image url="@sad.png" requestedWidth="130" requestedHeight="130"/>
+            </image>
+        </ImageView>
+    </HBox>
+</VBox>

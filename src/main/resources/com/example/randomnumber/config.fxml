@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.randomnumber.ConfigController"
+      prefHeight="400.0" prefWidth="600.0">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0"/>
+    </padding>
+    <HBox spacing="7.0">
+        <Label text="Tries"/>
+        <TextField fx:id="tries"></TextField>
+    </HBox>
+    <HBox spacing="7.0">
+        <Label text="Min number"/>
+        <TextField fx:id="nMin"></TextField>
+    </HBox>
+    <HBox spacing="7.0">
+        <Label text="Max number"/>
+        <TextField fx:id="nMax"></TextField>
+    </HBox>
+    <Button fx:id="ok" text="New Game" onAction="#onButtonOk"/>
+</VBox>
